@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 function HomeScreen() {
     return (
-        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: 'lavenderblush' }}>
             <Text>Home Screen</Text>
         </View>
     );
@@ -25,7 +25,7 @@ function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
-                <Stack.Screen name="Home" component={HomeScreen} options={{ title: "Overview" }} />
+                <Stack.Screen name="Home" component={HomeScreen} options={{ title: "Overview", headerStyle: { backgroundColor: "lavender" }, headerShadowVisible: true }} />
                 <Stack.Screen name="Details" component={DetailsScreen} />
             </Stack.Navigator>
         </NavigationContainer>
